@@ -3,6 +3,8 @@ package crackerBarrel;
 import java.awt.Color;
 import java.text.ParsePosition;
 
+import sun.tools.tree.ThisExpression;
+
 public class Peg {
 	private String color;
 	
@@ -16,5 +18,18 @@ public class Peg {
 	
 	public String getColor() {
 		return this.color;
+	}
+	
+	@Override
+	public boolean equals(Object o) {
+		
+		if (o == this) return true;
+		
+		if(!(o instanceof Peg))return false;
+		
+		Peg peg = (Peg) o;  
+		
+		if((peg.getColor() != null && this.color != null)) return true;
+		else return false;
 	}
 }
