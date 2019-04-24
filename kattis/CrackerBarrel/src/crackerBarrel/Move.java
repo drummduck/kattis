@@ -34,11 +34,4 @@ public class Move {
 	public Peg getRemovedPeg() {
 		return mRemovedPeg;
 	}
-	
-	@Override
-	public String toString() {
-		StringBuilder builder = new StringBuilder();
-		builder.append("Move peg at " + mFrom + " to slot " + mTo + ", removing peg at " + mRemoved + "\n");
-		return builder.toString();
-	}
 }
